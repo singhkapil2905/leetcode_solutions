@@ -33,7 +33,6 @@ private:
         
         auto ways = 0;
         for (auto idx = 0; idx < n; ++idx) {
-            auto f = IsValid(placed, col, idx);
             if (IsValid(placed, col, idx)) {
                 placed[col] = idx;
                 ways += Queens(placed, col + 1, n);
